@@ -22,4 +22,4 @@ services:
         --email ${EMAIL}
         --non-interactive
         --manual-auth-hook /usr/local/bin/add_dns.sh
-        --pre-hook /usr/local/bin/post-hook.sh
+        --post-hook /usr/local/bin/post-hook.sh
