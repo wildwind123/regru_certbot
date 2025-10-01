@@ -2,4 +2,4 @@
 
 set -e
 
-echo "-- success --";
+echo "-- success --" >&2
