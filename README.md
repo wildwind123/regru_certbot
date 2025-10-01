@@ -6,6 +6,13 @@
 docker compose up
 ```
 
+## renew cert
+
+```bash
+docker compose -f docker-compose-renew.yaml up
+```
+
+
 ## cert path
 
 ```
@@ -17,8 +24,4 @@ data/etc/letsencrypt/
 
 ```bash
 docker compose run --rm certbot certificates
-```
-
-```bash
-docker compose run --rm certbot renew --manual --preferred-challenges dns --agree-tos --email ${EMAIL} --non-interactive --quiet --manual-auth-hook /usr/local/bin/add_dns.sh
 ```
