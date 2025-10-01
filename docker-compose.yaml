@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  certbot:
+    build: .
+    container_name: certbot
+    stdin_open: true  
+    tty: true         
+    volumes:
+      - ./data/etc/letsencrypt:/etc/letsencrypt
+      - ./data/var/lib/letsencrypt:/var/lib/letsencrypt
+      - ./data/var/log/letsencrypt:/var/log/letsencrypt
+      - ./data/script/add_dns.sh:/usr/local/bin/add_dns.sh
+    env_file:
+      - .env
+    command: >
+      certonly
+        --manual
+        --preferred-challenges dns
+        --agree-tos
+        --email ${EMAIL}
+        --non-interactive
+        --manual-auth-hook /usr/local/bin/add_dns.sh
+        ${DOMAINS}
