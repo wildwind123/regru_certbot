@@ -31,3 +31,7 @@ docker compose run --rm certbot certificates
 ```bash
 0 2 * * * cd /home/user/projects/github/regru_certbot && docker compose -f docker-compose-renew.yaml up
 ```
+
+###
+
+tested on certbot v5.0.0
