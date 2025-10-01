@@ -29,7 +29,8 @@ docker compose run --rm certbot certificates
 ## add to crontab
 
 ```bash
-0 2 * * * cd /home/user/projects/github/regru_certbot && docker compose -f docker-compose-renew.yaml up
+# sudo crontab -e
+0 2 * * * /home/user/projects/github/regru_certbot/renew.sh >> /home/user/projects/github/regru_certbot/data/cron.log 2>&1
 ```
 
 ###
