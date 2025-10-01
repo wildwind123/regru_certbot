@@ -11,6 +11,7 @@ services:
       - ./data/var/lib/letsencrypt:/var/lib/letsencrypt
       - ./data/var/log/letsencrypt:/var/log/letsencrypt
       - ./data/script/add_dns.sh:/usr/local/bin/add_dns.sh
+      - ./data/script/post-hook.sh:/usr/local/bin/post-hook.sh
     env_file:
       - .env
     command: >
@@ -21,3 +22,4 @@ services:
         --email ${EMAIL}
         --non-interactive
         --manual-auth-hook /usr/local/bin/add_dns.sh
+        --pre-hook /usr/local/bin/post-hook.sh
