@@ -11,3 +11,5 @@ if echo "$OUTPUT" | grep -q -- "---success---"; then
 else
     echo "ℹ No success marker, skipping nginx reload."
 fi
+
+date
