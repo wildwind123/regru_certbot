@@ -25,6 +25,7 @@ fi
   goacme/lego \
   --email "mail@mail.ru" \
   --dns regru \
+  --dns.resolvers 8.8.8.8:53 \
   --domains "host.ru" \
   --domains "*.host.ru" \
   --accept-tos \
