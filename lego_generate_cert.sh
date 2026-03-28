@@ -31,6 +31,7 @@ fi
   --accept-tos \
   "$ACTION"
 
+# touch -d "2026-03-31 12:00:00" "$CERT_FILE"
 AFTER=$(stat -c %Y "$CERT_FILE" 2>/dev/null || echo 0)
 
 if [ "$AFTER" -gt "$BEFORE" ]; then
