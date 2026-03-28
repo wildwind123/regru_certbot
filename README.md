@@ -1,4 +1,14 @@
-# regru_certbot
+# 1. legru_lego (new)
+## generate cert
+```
+./lego_generate_cert.sh run
+```
+## renew cert
+```
+./lego_generate_cert.sh
+```
+
+# 2. regru_certbot (old)
 
 ## generate cert
 
