@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd "$(dirname "$0")" || exit 1
+
 ACTION="${1:-renew}"
 
 CERT_FILE="$PWD/lego-data/certificates/host.ru.crt"
