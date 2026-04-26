@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ACTION="${1:-renew}"
 
 CERT_FILE="$PWD/lego-data/certificates/host.ru.crt"
